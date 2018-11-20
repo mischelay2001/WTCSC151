@@ -1,0 +1,53 @@
+import java.lang.Math;
+
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+public class Unit05FlashCard {
+
+	public static void main(String[] args) {
+
+		// Program displays a WidgetViewer GUI
+		WidgetViewer wv = new WidgetViewer();
+		
+		// Program generates two random numbers in the specified range
+		int randomNumber1 = (int)(Math.random() * 10);
+		int randomNumber2 = (int)(Math.random() * 10);
+		int productOfNumbers = randomNumber1 * randomNumber2;
+				
+		// Program displays a JLabel asking the user to enter the product of the two random numbers
+		String userEntry = null;
+		
+        JLabel jluserProduct = new JLabel("Enter the product of the two numbers: ");
+        wv.add(jluserProduct, 10, 30, 300, 20);
+        
+        // Capture the product input from user as JTextField.  It will reflect what the user entered.
+        userEntry = jluserProduct.getText();
+        
+        // Convert user entry into an integer
+        int userProduct = Integer.parseInt(userEntry);
+        
+        JTextField jtfuserProduct = new JTextField("User entered " + userProduct + " as the product.");
+        wv.add(jtfuserProduct);
+        
+        // we can also use a JTextField for user input.  If the user changes the JTextField,
+        // those changes will be reflected in the return value from getText after addAndWait returns.
+        //JTextField jtfuserProduct = new JTextField("User entered " + userProduct + " as the product.");
+        //wv.add(jtfuserProduct);
+
+        
+       
+        
+        
+        
+		
+
+        
+        
+		// Program displays a JTextField for the user's answer
+		// Program displays a JButton for the user to acknowledge that input is available
+		// Program displays an appropriate message
+		// Program does not use Scanner or System.out.print for user input or output
+
+	}
+
+}

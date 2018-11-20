@@ -1,0 +1,55 @@
+/** Create a program asking whether the parents are visiting, 
+ * whether the weather is good, and whether you are rich or poor.  
+ * Your program should print "go to the cinema" "go shopping" or "stay in" as appropriate. 
+ */
+
+/**
+ * @author Michele Johnson
+ *
+ */
+// Import Statements
+import java.util.Scanner; // Scanner is in the java.util package
+
+public class MakeUpYourMind {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Create a Scanner object
+		Scanner stdin  = new Scanner(System.in);
+		
+		int n = 0;
+		n = stdin.nextInt();
+		
+		// the sum of all the even integers read, 
+		int evenIntegers = 0;
+		// the sum of all the odd integers read, 
+		int oddIntegers = 0;
+		// a count of the number of even integers read, and
+		int totalEvenIntegers = 0;
+		// a count of the number of odd integers read, 
+		int totalOddIntegers = 0;
+		
+		while (n >= 0) {
+		
+			if (n % 2 == 0) {
+				evenIntegers += n;
+				totalEvenIntegers++;
+			}
+			
+			if (n % 1 == 0) {
+				oddIntegers += n;
+				totalOddIntegers++;
+			}
+		}
+			
+		else if (n < 0) {
+			// all separated by at least one space
+			System.out.print(evenIntegers + " " + oddIntegers + " " + totalEvenIntegers + " " + totalOddIntegers);
+		}
+		
+		// Close Scanner
+		stdin.close();
+			}
+	}

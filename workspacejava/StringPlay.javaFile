@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class StringPlay {
+
+	public static void main(String[] args) {
+		
+		String s;
+		String s2;
+		
+		s = "Hello World";
+		s2 = " Strings are immutable ";
+		
+		// print s and s2
+		
+		// print the length of s and s2
+		
+		// print the index of the W in s
+		
+		// print the character at position 4 of s2
+		
+		// print the character at the last position of s
+		
+		// what does the following line do to s?
+		s.toUpperCase();
+		// verify your answer--print s
+		
+		// write a statement that makes s2 be STRINGS ARE IMMUTABLE
+		
+		// use substring on s2 to print  IMMUTABLE 
+		
+		// use substring on s2 to print STRINGS
+		
+		// use substring on s2 to print ARE
+		
+		// use the three substring calls above to print STRINGS ARE IMMUTABLE on one line
+		
+		// declare a String s3.  Using substring and indexOf,
+		// set s3 to be the value of s, but with the space changed
+		// to newline 
+		
+		String s4 = "sophie";
+		String s5 = "sally";
+		String s6 = "sophiesally";
+		String s7 = s4 + s5;
+		
+		// compare s6 and s7 for equality
+		
+		// print whether s6 and s7 are the same object
+		
+		// compare s4 and s5 using compareTo
+		// compare s5 and s4 using compareTo
+		// compare s6 and s7 using compareTo
+	
+	}
+
+}

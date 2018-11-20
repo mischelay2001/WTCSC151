@@ -1,0 +1,56 @@
+/** Using the grading weights table found in Course Resources, 
+ * write a program that asks for the % averages for labs, midterm, 
+ * final, the project, etc, and calculates the final grade. 
+ */
+
+/**
+ * @author Michele Johnson
+ *
+ */
+// Import Statements
+import java.util.Scanner; // Scanner is in the java.util package
+
+public class MyGradeCalculator {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Create a Scanner object
+		Scanner input  = new Scanner(System.in);
+		
+		// Assign Constant Values
+		double activityLabs = 0.25;
+		double activityRevelScores = 0.25;
+		double activityMidterm = 0.20;
+		double activityProject = 0.20;
+		double activityFinal = 0.20;
+		
+		// Display prompt and Obtain User Averages
+		System.out.print("Enter your average for Labs: ");
+		double userLabs = input.nextDouble();
+		double userAverageTotal = (activityLabs * userLabs);
+		
+		System.out.print("Enter your average for RevelScores: ");
+		double userRevelScores = input.nextDouble();
+		userAverageTotal = userAverageTotal + (activityRevelScores * userRevelScores);
+
+		System.out.print("Enter your average for the Midterm: ");
+		double userMidterm = input.nextDouble();
+		userAverageTotal = userAverageTotal + (activityMidterm * userMidterm);
+		
+		System.out.print("Enter your average for the Project: ");
+		double userProject = input.nextDouble();
+		userAverageTotal = userAverageTotal + (activityProject * userProject);
+		
+		System.out.print("Enter your average for the Final: ");
+		double userFinal = input.nextDouble();
+		userAverageTotal = userAverageTotal + (activityFinal * userFinal);
+		
+		System.out.print("Your weighted average for the course is: " + userAverageTotal);
+		
+		// Close Scanner
+		input.close();
+	}
+
+}

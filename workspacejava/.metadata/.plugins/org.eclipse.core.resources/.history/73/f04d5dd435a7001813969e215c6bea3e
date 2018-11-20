@@ -1,0 +1,75 @@
+/** Using the grading weights table found in Course Resources, 
+ * write a program that asks for the % averages for labs, midterm, 
+ * final, the project, etc, and calculates the final grade. 
+ */
+
+/**
+ * @author Michele Johnson
+ *
+ */
+// Import Statements
+import java.util.Scanner; // Scanner is in the java.util package
+
+public class MyGradeCalculator {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Create a Scanner object
+		Scanner input  = new Scanner(System.in);
+		
+		// Assign Constant Values
+		double activityLabs = 0.20;
+		double activityQuizzes = 0.10;
+		double activityVideoGranding = 0.10;
+		double activityMidterm = 0.20;
+		double activityProject = 0.15;
+		double activityFinal = 0.20;
+		double activityInstructorDiscretion = 0.05;
+		
+		// Display prompt and Obtain User Averages
+		System.out.print("Enter your average for Labs: ");
+		double userLabs = input.nextDouble();
+		double userAverageTotal = userAverageTotal + (activityLabs * userLabs);
+		
+		System.out.print("Enter your average for Quizzes: ");
+		double userQuizzes = input.nextDouble();
+		double userAverageTotal = userAverageTotal + (activityQuizzes * userQuizzes);
+		
+		System.out.print("Enter your average for Video Grading: ");
+		double userVideoGrading = input.nextDouble();
+		double userAverageTotal = userAverageTotal + (activityVideoGrading * userVideoGrading);
+		
+		System.out.print("Enter your average for the Midterm: ");
+		double userMidterm = input.nextDouble();
+		double userAverageTotal = userAverageTotal + (activityMidterm * userMidterm);
+		
+		System.out.print("Enter your average for the Project: ");
+		double userProject = input.nextDouble();
+		double userAverageTotal = userAverageTotal + (activityProject * userProject);
+		
+		System.out.print("Enter your average for the Final: ");
+		double userFinal = input.nextDouble();
+		double userAverageTotal = userAverageTotal + (activityFinal * userFinal);
+		
+		System.out.print("Enter your average for Instructor Discretion: ");
+		double userInstructorDiscretion = input.nextDouble();
+		double userAverageTotal = userAverageTotal + (activityInstructorDiscretion * userInstructorDiscretion);
+		
+ 
+		
+		// If user activity average equals 0 and user activity count is less activity count
+		// Calculate Course Weighted Average
+			// For each activity:
+				// Display activity name
+				// Ask user for their average
+				// Multiply user average * user weight
+				// Assign product as average weight
+				// Add average weight to average weight total
+				// Add 1 to user activity count
+		
+		
+	}
+
+}

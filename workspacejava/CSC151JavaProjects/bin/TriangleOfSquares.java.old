@@ -1,0 +1,124 @@
+import java.util.*;
+
+public class TriangleOfSquares {
+
+	public static void main(String[] args) {
+		/** Write a program using a Scanner that asks the user for a number n between 1 and 9 (inclusive).  
+		 * The program prints a triangle with n rows.  The first row contains only the square of 1, and it is right-justified.  
+		 * The second row contains the square of 2 followed by the square of 1, and is right justified.  
+		 * Subsequent rows include the squares of 3, 2, and 1, and then 4, 3, 2 and 1, and so forth until n rows are printed.
+		 */
+
+		int[] squaresArray = {1,4,16,25,36,49,64,81};
+		
+		System.out.print("Enter a number from 1 through 9: ");
+		Scanner userInput = new Scanner(System.in);
+		
+		// int numberToSquare = Integer.parseInt(userInput);
+		int numberOfRows = 0;
+		int arrayIndex = -1;
+		String spaceOne = "p";
+		String spaceBetween = "";
+		String numberOfSpaces = null;
+		int temp = -1;
+		String lastString = null;
+		
+		int numberToSquare = 2;
+		
+		numberOfRows = numberToSquare;
+		
+		System.out.println();
+
+		// Loop to add spaces
+		int spaceLoop = numberToSquare - 1;
+		int k = 0;
+		
+		// Case: number to square = 1
+		if (numberToSquare == 1) {
+		System.out.printf("%8s", squaresArray[0]);
+		}		
+		
+		// Case: number to square > 1
+
+		else {
+		// Case: number to square > 1
+			
+			// Loop to print the number of rows
+			for (int j = 1; j <= numberOfRows; j++)
+			
+			
+				// Assigns and prints the last String
+				lastString = "";
+				System.out.printf("%8s", lastString);
+				
+				// Print max number of columns
+				int maxColumns = numberToSquare;
+				for (int i = 1; i <= maxColumns; i++) {
+					System.out.printf("%8s", spaceOne);
+					//spaceBetween += spaceOne;
+				}
+				
+				
+			}
+			//System.out.println("Case 2 Space between " + spaceBetween + "last string :" + lastString);
+			//System.out.printf("%8s", spaceBetween);
+			//System.out.printf("%8s", lastString);
+		
+/**			
+			for (int j = 0; j <= spaceLoop; j++) {
+			
+				// Loop to build blank spaces string
+				int maxColumns = numberToSquare;
+				for (int i = 0; i <= maxColumns; maxColumns++) {
+					spaceBetween += spaceOne;
+				}
+				System.out.println("Case 3 Space between" + spaceBetween + " Array " + squaresArray[j] + "last string :" + lastString);
+				System.out.printf("%8s", spaceBetween);
+				System.out.printf("%8s", squaresArray[j]);
+				System.out.printf("%8s", lastString);
+				
+				lastString += squaresArray[j];
+				//lastString += squaresArray[j];
+				//numberOfRows--;
+				
+				//System.out.printf("%8s", lastString);
+				
+				//lastString = "" + squaresArray[0];
+				System.out.println();
+			}
+			
+			// numberToSquare--;
+		}
+*/
+		/**	for (int i = spaceLoop; i >= 0; i--) {
+				// System.out.println("Space Loop: " + spaceLoop + " i: " + i);
+				spaceBetween += (spaceOne);
+				System.out.printf("%8s", spaceBetween);
+				
+				for (int j = 0; j <= numberToSquare; j++) {
+					System.out.println("Row Number: " + squaresArray[j]);
+				}
+			}
+		
+		
+		//temp = squaresArray[5];
+		// temp = 1234;
+		//System.out.printf("%8d %8s %8.1f\n", 1234);
+		//System.out.printf("%8d\n", squaresArray[5]);
+		
+		
+		/**for (int rowCount = (numberOfRows - 1); rowCount >= 0; rowCount--) {
+			
+			for (int spaceCount = (numberOfRows - 1); spaceCount > 0; spaceCount--) {
+				spaceBetween += spaceOne;
+				System.out.printf("%8d%8s%8.1f\n", squaresArray[spaceCount]);
+				System.out.println("Number of Rows: " + (numberOfRows-1) + " Space Count: " + spaceCount + " Space Between: " + spaceBetween);
+			}
+			
+			System.out.println(spaceBetween + rowCount);
+			spaceBetween = "";
+		}
+		*/
+	}
+
+}

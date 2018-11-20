@@ -1,0 +1,99 @@
+import java.util.Scanner;
+//import Math;
+public class StringPlay {
+
+	public static void main(String[] args) {
+		
+		// Define Variables
+		String userEntry;
+		String userEntryTrimmed;
+		String userEntryFirst3;
+		String userEntryLast4;
+		String userEntryMiddle;
+		String userEntryLast4First3Swap;
+		String userEntryLowercase;
+		String userEntryUppercase;
+		String userEntryFirstHalf;
+		String userEntrySecondHalf;
+		
+		// Create a Scanner object
+		Scanner userEntryOriginal  = new Scanner(System.in);
+		
+		//Obtain user entry
+		System.out.println("Enter a line of text at least 7 characters long");
+		userEntry = userEntryOriginal.nextLine();
+		
+		// Look for leading and trailing white spaces
+		userEntryTrimmed = userEntry.trim();
+		System.out.println("User entry has been trimmed of leading and trailing white spaces: ");
+		System.out.println(userEntryTrimmed);
+		// System.out.println();
+		
+		/* Concatenate as a new string as first 3 characters as the last characters 
+		and the last 4 characters will become the first */
+		  
+		  	// Find the length of userEntry
+			int userEntryLastIndex = userEntryTrimmed.length() - 1;
+			System.out.println("The trimmed version of user entry has " + userEntryTrimmed.length() + " characters");
+		  	System.out.println("Index position of the last character of user entry: " + userEntryLastIndex);
+		  	
+			// Find first 3 letters in userEntry
+			userEntryFirst3 = userEntryTrimmed.substring(0, 3);
+			System.out.println("First 3 characters of user entry: " + userEntryFirst3);
+		
+			// Find last 4 letters in userEntry
+			userEntryLast4 = userEntryTrimmed.substring(userEntryLastIndex - 3);
+			System.out.println("Last 4 characters of user entry: " + userEntryLast4);
+			
+			// Find remaining characters in between first 3 and last 4
+			userEntryMiddle = userEntryTrimmed.substring(3);
+			System.out.println("The characters between the first 3 and last 4 of user entry: " + userEntryMiddle);
+			
+			// Concatenate new string with last 4 + middle characters + first3
+			System.out.print("User entry as been modified,");
+			userEntryLast4First3Swap = userEntryLast4.concat(userEntryMiddle + userEntryFirst3);
+			System.out.print(" the last 4 characters are now leading and the first 3 are trailing: ");
+			System.out.print(userEntryLast4First3Swap);
+			System.out.println();			
+			
+		// Convert userEntry to all uppercase
+		userEntryUppercase = userEntry.toUpperCase();
+		System.out.println("User entry as all uppercase: " + userEntryUppercase);
+		System.out.println();
+		
+		// Convert userEntry to all lowercase and compare against userEntry
+		userEntryLowercase = userEntry.toLowerCase();
+		System.out.println("User entry as all lowercase: " + userEntryLowercase);
+		int userEntryCompareUserEntryLowercase = userEntry.compareTo(userEntryLowercase);
+		System.out.println("The comparison returns a value of :" + userEntryCompareUserEntryLowercase);
+		System.out.println();
+		
+		// Find first half and last half of userEntry and determine if they are equivalent
+		
+			// Find midpoint of user entry
+			float userEntryMidIndex = (userEntry.length() / 2);
+			int MidIndex = (int)userEntryMidIndex;
+			//Handle even or odd midpoint index
+			if (MidIndex % 2 != 0) {
+				++MidIndex;
+			}
+
+			// Define the first and last halves
+			userEntryFirstHalf = userEntryTrimmed.substring(0, MidIndex);
+			System.out.println("The first half of user entry: " + userEntryFirstHalf);
+			userEntrySecondHalf = userEntryTrimmed.substring(MidIndex);
+			System.out.println("The last half of user entry: " + userEntrySecondHalf);
+
+			// Compare first and last half to determine if they are equivalent
+			if (userEntryFirstHalf.equalsIgnoreCase(userEntrySecondHalf)){
+				System.out.println("The first half of user entry equals the second half");
+			}
+			else {
+				System.out.println("The first half of user entry does not equal the second half");
+			}
+			
+		// Close Scanner
+		userEntryOriginal.close();
+	}
+
+}

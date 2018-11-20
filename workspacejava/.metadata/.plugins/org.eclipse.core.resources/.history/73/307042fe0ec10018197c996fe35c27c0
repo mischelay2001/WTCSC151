@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class Quiz5_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Create Scanner for input
+		Scanner userInput = new Scanner(System.in);
+		
+		// Declare Variables
+		int evenSum = 0, oddSum = 0, evenCount = 0, oddCount = 0;
+		Boolean loopControl = false;
+		int aNumber = 0;
+		
+		while (loopControl != true) {
+		    
+		    // Declare and receive userInput
+		    aNumber = userInput.nextInt();
+		    
+    		if (aNumber < 0){
+    		    loopControl = true;
+    		    System.out.println("The number: " + aNumber);
+    		}
+    		
+    		else {
+        		if (aNumber % 2 == 0){
+            		evenSum += aNumber;
+            		evenCount++;
+        	    }
+        		
+        		else {
+            		oddSum += aNumber;
+            		oddCount++;
+        		}
+    		}
+    	}
+		
+    	System.out.println("The number2: " + aNumber);
+		// all separated by at least one space
+		System.out.print(evenSum + " " + oddSum + " " + evenCount + 
+				" " + oddCount);
+		
+		// Close Scanner
+		userInput.close();
+	}
+}

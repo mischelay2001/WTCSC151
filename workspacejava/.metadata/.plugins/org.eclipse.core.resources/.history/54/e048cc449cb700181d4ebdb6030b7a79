@@ -1,0 +1,33 @@
+/** Create a program asking whether the parents are visiting, 
+ * whether the weather is good, and whether you are rich or poor.  
+ * Your program should print "go to the cinema" "go shopping" or "stay in" as appropriate. 
+ */
+
+/**
+ * @author Michele Johnson
+ *
+ */
+// Import Statements
+import java.util.Scanner; // Scanner is in the java.util package
+
+public class MakeUpYourMind {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Create a Scanner object
+		Scanner stdin  = new Scanner(System.in);
+		
+		int n = 0;
+		System.out.println(n);
+		
+		while (n < 1 && n > 10) {
+			System.out.print("Enter a number: ");
+			n = stdin.nextInt();
+		}
+			
+		// Close Scanner
+		stdin.close();
+			}
+	}

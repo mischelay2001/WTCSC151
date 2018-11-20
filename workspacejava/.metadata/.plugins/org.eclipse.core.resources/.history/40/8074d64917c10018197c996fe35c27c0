@@ -1,0 +1,28 @@
+import java.util.*;
+public class Quiz5_3_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner userInput = new Scanner(System.in);
+		String [] input = {"a ", "b ", "c "};
+		
+		int inputLinesCount = 0;
+		//int loopCount = 0;
+		Boolean loopControl = false;
+		// int loopCount = 0; 
+		int numLines = 0;
+		
+		// Get lines from input and store in array
+		
+		// Count the number of lines in the array
+		inputLinesCount = input.length;
+		numLines = input.length;
+		// For each line, print the line, a space
+		for (int loopCount = 0; (loopCount < numLines); loopCount++) {
+			System.out.print(input[loopCount] + " ");
+			
+		}
+
+	}
+}

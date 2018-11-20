@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;StringPlay&apos; to &apos;CSC151JavaProjects/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Strings&apos;&#x0D;&#x0A;- Destination element: &apos;CSC151JavaProjects/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;StringPlay&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="=CSC151JavaProjects/src&lt;" element1="StringPlay" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1538310740802" units="0" version="1.0"/>
+</session>

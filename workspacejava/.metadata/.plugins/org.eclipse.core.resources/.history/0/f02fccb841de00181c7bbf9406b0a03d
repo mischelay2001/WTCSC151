@@ -1,0 +1,19 @@
+public class temp{
+
+	public static void main(String[] args) {
+
+		int comparison = 0;
+		int count = 5;
+		boolean runUntil = false;
+		while(runUntil != true) {
+			comparison++;
+			count--;
+			if (count == 0) {
+				runUntil = true;
+			}
+			
+			
+		}
+		
+	}
+}

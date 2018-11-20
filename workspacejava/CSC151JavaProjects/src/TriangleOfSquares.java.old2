@@ -1,0 +1,75 @@
+import java.util.*;
+
+public class TriangleOfSquares {
+
+	public static void main(String[] args) {
+		/** Write a program using a Scanner that asks the user for a number n between 1 and 9 (inclusive).  
+		 * The program prints a triangle with n rows.  The first row contains only the square of 1, and it is right-justified.  
+		 * The second row contains the square of 2 followed by the square of 1, and is right justified.  
+		 * Subsequent rows include the squares of 3, 2, and 1, and then 4, 3, 2 and 1, and so forth until n rows are printed.
+		 */
+
+		int[] squaresArray = {1,4,16,25,36,49,64,81};
+		
+		//System.out.print("Enter a number from 1 through 9: ");
+		//Scanner userInput = new Scanner(System.in);
+		
+		// int numberToSquare = Integer.parseInt(userInput);
+		
+		int userEntry = 4;
+		int numberOfIndexs = userEntry - 1;
+		int[] userEntryArray = new int [userEntry - 1];
+		
+		for (int d = 0; d < userEntry - 1; d++) {
+			userEntryArray[d] = squaresArray[d];
+		}
+		
+		
+		for (int arrayElement = 0; arrayElement < userEntryArray.length; arrayElement++) {
+			System.out.print(userEntryArray[arrayElement] + " ");
+		}
+		
+		System.out.println();
+		// Loop
+		// While number of Indexs is less than user Entry - 1and greater than 0
+		// Ex:  user Entry = 4; number of Indexs = 3 --> Loops 3 times
+
+		for(numberOfIndex)
+		
+		int largestIndex = numberOfIndexs - 1;
+		String keepLine = "";
+
+			// for each time in loop
+
+			if (largestIndex >= 0) {
+				// print the largest index
+				// Ex: if number of Indexs = 3 then largest index = 3 - 1 or 2
+				System.out.print(userEntryArray[largestIndex]);
+				System.out.println("First pass " + largestIndex);
+				keepLine += userEntryArray[largestIndex];
+				// print a tab
+				System.out.printf("%8s", "");
+				keepLine += ("");
+				// reduce largest index by 1
+				largestIndex--;
+				System.out.println(largestIndex);
+			}
+		
+		
+		System.out.print("Keep Line " + keepLine);
+		/**	
+			while (numberOfIndexs <= arrayLength && numberOfIndexs >= 0) {
+				System.out.print(userEntryArray[numberOfIndexs]);
+				System.out.printf("%8s", "");
+				numberOfIndexs--;
+				System.out.println();
+				System.out.println("Number Of Indexs " + numberOfIndexs);
+				System.out.println("Array Length " + arrayLength);
+				}
+			//System.out.println("Array Length " + arrayLength);
+
+		}
+		*/
+	}
+
+}

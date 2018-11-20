@@ -1,0 +1,52 @@
+/** Using the grading weights table found in Course Resources, 
+ * write a program that asks for the % averages for labs, midterm, 
+ * final, the project, etc, and calculates the final grade. 
+ */
+
+/**
+ * @author Michele Johnson
+ *
+ */
+public class MyGradeCalculator {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Initialize Variables
+			// Set activity count to 0
+			// Set activity to null string
+			// Set activity weight to 0
+			// Set activity total weight to 0
+			// Set user activity average to 0
+			// Set user activity weight to 0
+			// Set user activity count to 0
+		
+		// If activity total weight equals 100 or number of activities greater than 0, continue
+			// Repeat the following as long as activity count is 0 or activity total less than 100
+			// Else repeat Obtain Course Activities and Weight
+			
+				// Obtain Course Activities and Weight
+				// For each activity:
+					// Ask User the name of the activity
+					// Ask User the weight of the activity
+					// Assign activity name equal to weight
+					// Add weight to activity total weight
+					// Add 1 to activity count
+				
+				// Verify activity total weight equals 100
+		
+		// If user activity average equals 0 and user activity count is less activity count
+		// Calculate Course Weighted Average
+			// For each activity:
+				// Display activity name
+				// Ask user for their average
+				// Multiply user average * user weight
+				// Assign product as average weight
+				// Add average weight to average weight total
+				// Add 1 to user activity count
+		
+		
+	}
+
+}

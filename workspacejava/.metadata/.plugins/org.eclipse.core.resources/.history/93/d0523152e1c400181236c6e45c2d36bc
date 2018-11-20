@@ -1,0 +1,78 @@
+import java.lang.Math;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+public class Unit05FlashCard {
+
+	public static void main(String[] args) {
+
+		// Program displays a WidgetViewer GUI
+		WidgetViewer wv = new WidgetViewer();
+		
+		// Write a program that uses a WidgetViewer object to do the following:  
+				
+		// Program should use a Random object to generate two random numbers between 0 and 9 (inclusive).
+		// Generate two random integers between 1 and 9 (inclusive).  Name one of them x, the other y. 
+		int x = (int)(Math.random() * 10);
+		int y = (int)(Math.random() * 10);
+		
+		// Control random numbers are between 0 and 9
+		if (x > 9) {
+			x -= 1;
+		}
+		
+		if (y > 9) {
+			y -= 1;
+		}
+		
+		// Display x and y to the user using JLabel objects.
+        JLabel jlNumberX = new JLabel("X: " + x);
+        wv.add(jlNumberX, 10, 30, 50, 20);
+        
+        JLabel jlNumberY = new JLabel("Y: " + y);
+        wv.add(jlNumberY, 10, 40, 50, 20);
+        
+        // Display user instructions; Create a JLabel object displaying the text "Enter an operation number."
+        JLabel jlUserInstructions = new JLabel("Select an operation by entering a number between 1 and 10. ");
+        
+        // Create a JTextField for the user's input.
+        // Capture the product input from user as JTextField.  It will reflect what the user entered.
+        JTextField jtfuserEntry = new JTextField();
+        wv.add(jtfuserEntry);
+        
+		// Create a JButton displaying the text "Press here when you've entered your operation."  
+        // Use addAndWait to add it to the WidgetViewer object.
+		// When the user clicks the JButton, evaluate operation in the following order to determine the one and only 
+        // mathematical operation to perform on x and y.  Use a JLabel to display the result.
+        JButton jbUserEnter = new JButton("Click Here to confirm your selection.");
+        wv.addAndWait(jbUserEnter);
+
+		
+		// Find the product
+		int productOfNumbers = x * y;
+				
+		// Program displays a JLabel asking the user to enter the product of the two random numbers
+		// String userEntry = null;
+		
+        JLabel jluserProduct = new JLabel("What is the product of " + x + " and " + y + ": ");
+        wv.add(jluserProduct, 10, 30, 300, 20);
+
+        String userEntry = jtfuserProduct.getText();
+        
+        // Convert user entry into an integer
+        int userProduct = Integer.parseInt(userEntry);
+        
+        // Evaluate the user's product against the calculated product
+        if (userProduct == productOfNumbers) {
+            JLabel jlAnswerMessage = new JLabel("YOU ARE CORRECCT!!!");
+            wv.add(jlAnswerMessage, 10, 100, 300, 20);
+        }
+        else {
+        	JLabel jlAnswerMessage = new JLabel("INCORRECT  " + productOfNumbers + " is the correct answer.");
+        	wv.add(jlAnswerMessage, 10, 100, 300, 20);
+        }
+
+	}
+
+}

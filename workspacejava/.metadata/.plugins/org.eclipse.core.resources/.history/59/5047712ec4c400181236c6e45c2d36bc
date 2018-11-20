@@ -1,0 +1,17 @@
+
+public class Unit05FlashCard {
+
+	public static void main(String[] args) {
+
+		// Program displays a WidgetViewer GUI
+		WidgetViewer wv = new WidgetViewer();
+		// Program generates two random numbers in the specified range
+		// Program displays a JLabel asking the user to enter the product of the two random numbers
+		// Program displays a JTextField for the user's answer
+		// Program displays a JButton for the user to acknowledge that input is available
+		// Program displays an appropriate message
+		// Program does not use Scanner or System.out.print for user input or output
+
+	}
+
+}
